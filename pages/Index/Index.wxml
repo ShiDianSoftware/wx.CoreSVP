@@ -1,0 +1,3 @@
+<!--Index.wxml-->
+<include src="/pages/FrameWorks/CoreSVP/CoreSVP.wxml" />
+<button bindtap="btnClick">按钮</button>
