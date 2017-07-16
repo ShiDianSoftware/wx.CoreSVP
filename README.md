@@ -20,7 +20,7 @@
 =======================
 
       CoreSVP.showText("加载失败，请重新登录")
-      CoreSVP.dismiss()
       CoreSVP.showLoading("加载中")
+      CoreSVP.dismiss()
       CoreSVP.showSuccess("登录成功")
       CoreSVP.showError("登录失败")
