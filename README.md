@@ -24,4 +24,4 @@
       CoreSVP.dismiss()
       CoreSVP.showSuccess("登录成功")
       CoreSVP.showError("登录失败")
-      CoreSVP.showInfo("手机格式有误")
+      CoreSVP.showInfo("手机格式有误")
