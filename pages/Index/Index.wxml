@@ -1,3 +1,5 @@
 <!--Index.wxml-->
 <include src="/pages/FrameWorks/CoreSVP/CoreSVP.wxml" />
-<button bindtap="btnClick">按钮</button>
+<button bindtap="btnClick1">按钮1</button>
+<button bindtap="btnClick2">按钮2</button>
+<button bindtap="btnClick3">按钮3</button>

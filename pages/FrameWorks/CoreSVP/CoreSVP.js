@@ -31,22 +31,32 @@ CoreSVP.dismiss = function () {
 //显示成功
 CoreSVP.showSuccess = function (title, completeClosure) {
 
-  this.showRes(true, title, completeClosure)
+  this.showRes(0, title, completeClosure)
 }
 
 //显示失败
 CoreSVP.showError = function (title, completeClosure) {
 
-  this.showRes(false, title, completeClosure)
+  this.showRes(1, title, completeClosure)
 }
 
-CoreSVP.showRes = function (isSuccess, title, completeClosure) {
+//显示注意
+CoreSVP.showInfo = function (title, completeClosure) {
+
+  this.showRes(2, title, completeClosure)
+}
+
+CoreSVP.showRes = function (i, title, completeClosure) {
 
   this.settings()
-  let image = isSuccess ? "" : ""
-  let d = isSuccess ? 2000 : 3000
+  var image = ""
+  if (i == 0) { image = "chenggong" }
+  if (i == 1) { image = "shanchu" }
+  if (i == 2) { image = "shibai" }
+
+  let d = i == 0 ? 2000 : 3000
   this.t.toast({
-    img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABuCAMAAADxhdbJAAAAgVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9d3yJTAAAAKnRSTlMA+0IPA2iTLO7YuiXr4/IcCqYkFbKZN/bUiHlbBs7J3L5hTtvDjFFx6Uzm0WRUAAAB20lEQVRo3u3Zy3KCQBCF4R4QFZGL4F0x4jXp93/AVBbmFFMx4MB0pVLz7bv+zdk1OY7jOI7j/C3ROh6RGG/MPBXrBYpZrDcYMrNYz5/ww5Ssi0L+FpM1GAlqOVkWKIkaRiJRw0jgLSW7olCy5o1FahgJhNZqGAmsC7LKn0jWolCmhpFAaa2GkcDBJyswEsGaPxGqYSRwsVbDSOCYkU2BkqhhJEI1jAQm1moYCcz3ZJE3lqwFSqqGkcDMXg0jQW1A9kShcS39MBiJcc0/89w3GgksUGsyY+bzyGQkqFFrFX9ZVQYjMahFyeMmazuSDrWs5IcyNxoJX6m9IUNyMxgJb+gF9evroHEkJjW4cs0lbRiJWQ0WXPPutRgJbOlVM65R24aRGNVgoPV4XjSOBDWD3pzr4mXDSFAzsdd7KmgxEr6ToezImlnWNBIOyFh2Yc16pI+kew38A2uSnT6S7jXwS9YN909HoirqqFiz7pA+GYnaUWfFmXXjXeGF/dYgfeNmqHXvxa1qN+pJ3qKnTtSb0VSmhp5EDZYJ/2LlEQn0UOudtxKpoackanD6sZcsyZKbkqjBTknUoBKpQcAg8Te6i9RgK1KDjWANvTgnIQvURGxUmZPjOI7jOM7/9wkPMejs5BepRwAAAABJRU5ErkJggg==',
+    img: "/pages/FrameWorks/CoreSVP/CoreSVP.bundle/" + image + ".png",
     title: title,
     duration: d,
     success(data) {

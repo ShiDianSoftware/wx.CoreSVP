@@ -27,7 +27,7 @@
     padding: 15px;
     box-sizing: border-box;
     transform: translateX(-50%);
-    background: rgba(40, 40, 40, 0.75);
+    background: rgba(40, 40, 40, 0.8);
     border-radius: 5px;
     color: #FFFFFF;
     word-wrap: break-word;
@@ -39,8 +39,8 @@
 	margin-top: 3px;
 }
 .wetoast__bd__img_desc {
-    width: 55px;
-    height: 55px;
+    width: 44px;
+    height: 44px;
     vertical-align: middle;
 
 }
