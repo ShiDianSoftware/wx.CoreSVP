@@ -20,9 +20,9 @@
 	position: fixed;
     z-index: 5000;
     min-width: 8.4em;
-    min-height: 8.4em;
+    min-height: 7em;
     max-width: 70%;
-    top: 140px;
+    top: 30%;
     left: 50%;
     padding: 15px;
     box-sizing: border-box;
@@ -39,14 +39,14 @@
 	margin-top: 3px;
 }
 .wetoast__bd__img_desc {
-    width: 44px;
-    height: 44px;
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
 
 }
 .wetoast__bd__title {
 	margin: 3px 0;
-	font-size: 1.2em;
+	font-size: 1em;
   text-align: center;
   line-height: 1.6em;
 }
