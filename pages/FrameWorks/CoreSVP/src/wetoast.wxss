@@ -28,7 +28,7 @@
     box-sizing: border-box;
     transform: translateX(-50%);
     background: rgba(40, 40, 40, 0.8);
-    border-radius: 5px;
+    border-radius: 4px;
     color: #FFFFFF;
     word-wrap: break-word;
     word-break: break-all;

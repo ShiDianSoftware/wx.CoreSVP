@@ -43,7 +43,7 @@ function WeToastClass() {
     })
 
     setTimeout(() => {
-      let animation = wx.createAnimation()
+      let animation = wx.createAnimation({ duration: 200 })
       animation.opacity(1).step()
       data.animationData = animation.export()
       data.reveal = true
@@ -78,7 +78,8 @@ function WeToastClass() {
       return
     }
 
-    let animation = wx.createAnimation()
+    let animation = wx.createAnimation({ duration: 200 })
+   
     animation.opacity(0).step()
     page.setData({
       '__wetoast__.animationData': animation.export()
