@@ -43,14 +43,21 @@ function WeToastClass() {
     })
 
     setTimeout(() => {
+
       let animation = wx.createAnimation({ duration: 200 })
       animation.opacity(1).step()
       data.animationData = animation.export()
       data.reveal = true
+
+      if (data.duration > 10000) {
+
+        data.rotation = true
+      }
+
       page.setData({
         __wetoast__: data
       })
-    }, 30)
+    }, 10)
 
     if (data.duration === 0) {
       // success callback after toast showed

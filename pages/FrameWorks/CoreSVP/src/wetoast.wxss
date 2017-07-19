@@ -14,13 +14,13 @@
     bottom: 0;
 }
 .wetoast__bd {
-	opacity: 0;
+	opacity: 1;
 	display: flex;
 	flex-direction: column;
 	position: fixed;
     z-index: 5000;
-    min-width: 8.4em;
-    min-height: 7em;
+    min-width: 7em;
+    min-height: 6em;
     max-width: 70%;
     top: 30%;
     left: 50%;
@@ -37,13 +37,29 @@
 }
 .wetoast__bd__img {
 	margin-top: 3px;
+  display: block;
 }
 .wetoast__bd__img_desc {
-    width: 30px;
-    height: 30px;
+    width: 60rpx;
+    height: 60rpx;
     vertical-align: middle;
-
+    
 }
+
+.rotation {
+      width: 54rpx;
+    height: 54rpx;
+  animation:myfirst 1s ease-in-out infinite;
+}
+
+@keyframes myfirst
+{
+0%   {transform:rotate(0deg)}
+100% {transform:rotate(360deg)}
+}
+
+
+
 .wetoast__bd__title {
 	margin: 3px 0;
 	font-size: 1em;

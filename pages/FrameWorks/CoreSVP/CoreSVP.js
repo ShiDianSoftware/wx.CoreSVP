@@ -20,12 +20,15 @@ CoreSVP.showText = function (str, duration = 3000) {
 //显示加载中
 CoreSVP.showLoading = function (title) {
 
-  wx.showLoading({ title: title, mask: true })
+  // wx.showLoading({ title: title, mask: true })
+  this.showRes(3, title, null)
 }
 
 //dismiss
 CoreSVP.dismiss = function () {
-  wx.hideLoading()
+
+  // wx.hideLoading()
+  this.t.hide()
 }
 
 //显示成功
@@ -50,11 +53,12 @@ CoreSVP.showRes = function (i, title, completeClosure) {
 
   this.settings()
   var image = ""
-  if (i == 0) { image = "chenggong" }
-  if (i == 1) { image = "shanchu" }
-  if (i == 2) { image = "shibai" }
+  var d = 0
+  if (i == 0) { image = "chenggong"; d=2000}
+  if (i == 1) { image = "shanchu"; d =3000}
+  if (i == 2) { image = "shibai"; d=3000}
+  if (i == 3) { image = "indicator"; d = 90000 }
 
-  let d = i == 0 ? 2000 : 3000
   this.t.toast({
     img: "/pages/FrameWorks/CoreSVP/CoreSVP.bundle/" + image + ".png",
     title: title,

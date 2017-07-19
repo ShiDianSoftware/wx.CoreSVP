@@ -26,9 +26,18 @@ Page({
 
   btnClick3: function () {
 
-      CoreSVP.showInfo("手机号格式有误")
+    CoreSVP.showInfo("手机号格式有误")
 
-    }
+  },
+
+  btnClick4: function () {
+
+    CoreSVP.showLoading("加载中")
+
+    setTimeout(function(){
+      CoreSVP.dismiss()
+    },5000)
+  }
 
 
 })
