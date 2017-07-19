@@ -46,7 +46,7 @@
     
 }
 
-.rotation {
+.wetoast__rotation {
       width: 54rpx;
     height: 54rpx;
   animation:myfirst 1s ease-in-out infinite;

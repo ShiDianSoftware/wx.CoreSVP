@@ -51,7 +51,9 @@ function WeToastClass() {
 
       if (data.duration > 10000) {
 
-        data.rotation = true
+        data.wetoast__rotation = true
+      }else {
+        data.wetoast__rotation = false
       }
 
       page.setData({
