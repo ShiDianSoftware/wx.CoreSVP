@@ -11,7 +11,7 @@
 
       <include src="/pages/FrameWorks/CoreSVP/CoreSVP.wxml" />
 
-#### 3. 导入WXML （app）
+#### 3. 导入WXSS （app）
 
       /**app.wxss**/
       @import "/pages/FrameWorks/CoreSVP/CoreSVP.wxss";
